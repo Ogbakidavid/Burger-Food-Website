@@ -41,12 +41,47 @@ galleryContent.forEach((item) => {
     gallery.appendChild(duplicateNode);
 })
 
-// const banner = document.querySelector(".banner__wrapper");
+const sr = ScrollReveal({
+    origin: "bottom",
+    distance: '80px',
+    duration: 1500,
+    delay: 600,
+});
 
-// const bannerContent = Array.from(banner.children)
+sr.reveal(`.home__title, .footer__title`, {
+    origin: 'left',
+});
 
-// bannerContent.forEach((item) => {
-//     const duplicateNode = item.cloneNode(true);
-//     duplicateNode.setAttribute("aria-hidden", true);
-//     banner.appendChild(duplicateNode);
-// })
+sr.reveal(`.home__desc`, {
+    origin: 'left',
+    delay: 1500,
+});
+
+sr.reveal(`.home__btn, .copyright`, {
+    origin: 'left',
+    delay: 2000,
+});
+
+sr.reveal(`.about__title, .menu__title, .reservation, .customer__title, .gallery__title, .contact__title`);
+
+sr.reveal(`.about__desc, .customer__swiper, .contact__content`, {
+    distance: '100px',
+    delay: 1200,
+});
+
+sr.reveal(`.about__btn, .input__group`, {
+    delay: 1500,
+});
+
+sr.reveal(`.about__img, .social__content`, {
+    origin: 'right',
+    distance: '150px',
+    delay: 2000,
+});
+
+sr.reveal(`.card, .footer__links`, {
+    distance: '120px',
+    duration: 1500,
+    delay: 1500,
+    interval: 300,
+});
